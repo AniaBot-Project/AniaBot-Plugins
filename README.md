@@ -73,8 +73,8 @@ index.json        # 聚合索引（由 scripts/build-index.sh 生成，CI 在合
 #    在插件仓库根执行 go build ./... / go test ./... 可独立校验全部插件
 
 # 1. 克隆 AniaBot 与本仓库
-git clone https://github.com/jeanhua/AniaBot.git
-git clone https://github.com/jeanhua/AniaBot-Plugins.git
+git clone https://github.com/AniaBot-Project/AniaBot.git
+git clone https://github.com/AniaBot-Project/AniaBot-Plugins.git
 
 # 2. 把正在开发的插件软链/复制到 AniaBot 源码树
 cp -r AniaBot-Plugins/plugins/my-plugin AniaBot/custom/plugins/my-plugin
@@ -87,8 +87,8 @@ go run cmd/main.go
 
 ```bash
 # 1. 克隆 AniaBot 与本仓库
-git clone https://github.com/jeanhua/AniaBot.git
-git clone https://github.com/jeanhua/AniaBot-Plugins.git
+git clone https://github.com/AniaBot-Project/AniaBot.git
+git clone https://github.com/AniaBot-Project/AniaBot-Plugins.git
 
 # 2. 把正在开发的插件软链/复制到 AniaBot 源码树
 cp -r AniaBot-Plugins/plugins/my-plugin AniaBot/custom/plugins/my-plugin
@@ -103,15 +103,15 @@ go run cmd/main.go
 
 | 链接 | 说明 |
 | --- | --- |
-| [AniaBot 框架仓库](https://github.com/jeanhua/AniaBot) | AniaBot 主仓库（框架代码、插件市场功能） |
-| [AniaBot 文档站点](https://jeanhua.github.io/AniaBot/) | AniaBot 完整文档 |
-| [插件系统概览](https://jeanhua.github.io/AniaBot/plugin/overview) | 插件开发入门：插件如何加载与执行 |
-| [第一个插件](https://jeanhua.github.io/AniaBot/plugin/first-plugin) | 从零开发第一个插件 |
-| [插件开发教程](https://jeanhua.github.io/AniaBot/plugin/tutorial) | 完整插件开发实战 |
-| [插件市场使用指南](https://jeanhua.github.io/AniaBot/guide/plugin-marketplace) | 面板在线安装 / 升级 / 卸载插件 |
+| [AniaBot 框架仓库](https://github.com/AniaBot-Project/AniaBot) | AniaBot 主仓库（框架代码、插件市场功能） |
+| [AniaBot 文档站点](https://aniabot-project.github.io/AniaBot/) | AniaBot 完整文档 |
+| [插件系统概览](https://aniabot-project.github.io/AniaBot/plugin/overview) | 插件开发入门：插件如何加载与执行 |
+| [第一个插件](https://aniabot-project.github.io/AniaBot/plugin/first-plugin) | 从零开发第一个插件 |
+| [插件开发教程](https://aniabot-project.github.io/AniaBot/plugin/tutorial) | 完整插件开发实战 |
+| [插件市场使用指南](https://aniabot-project.github.io/AniaBot/guide/plugin-marketplace) | 面板在线安装 / 升级 / 卸载插件 |
 | [插件规范（本仓库）](docs/plugin-spec.md) | plugin.json 元信息规范 |
 
-开发插件前，建议先阅读 AniaBot 的[插件开发文档](https://jeanhua.github.io/AniaBot/plugin/overview)，了解 `plugin.Meta`、消息事件、`msgchain` 消息构造器等基础 API，再参考本仓库的 [examples/example](examples/example) 示例插件。
+开发插件前，建议先阅读 AniaBot 的[插件开发文档](https://aniabot-project.github.io/AniaBot/plugin/overview)，了解 `plugin.Meta`、消息事件、`msgchain` 消息构造器等基础 API，再参考本仓库的 [examples/example](examples/example) 示例插件。
 
 ## 安全与信任模型
 
