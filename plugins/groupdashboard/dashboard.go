@@ -118,7 +118,7 @@ func qqAvatarURL(userID string) string {
 			return ""
 		}
 	}
-	return "https://q1.qlogo.cn/g?nk=" + num + "&s=100"
+	return "https://q1.qlogo.cn/g?b=qq&nk=" + num + "&s=100"
 }
 
 // avatarPalette 头像兜底底色（按昵称哈希取色，无头像时显示首字圆标）。

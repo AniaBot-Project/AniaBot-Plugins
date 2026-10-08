@@ -93,7 +93,7 @@ func NewPlugin() *GroupDashboardPlugin {
 	p.AdminOnly = false
 	p.ShowFor = plugininfo.ShowForGroup
 	p.Author = "jeanhua"
-	p.Version = "1.0.2"
+	p.Version = "1.0.3"
 	p.Order = plugin.LevelNormal
 	return p
 }

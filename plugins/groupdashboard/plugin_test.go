@@ -212,7 +212,7 @@ func TestBuildStats(t *testing.T) {
 	if s.NickCounts["张三"] != 2 {
 		t.Errorf("张三条数不符: %d", s.NickCounts["张三"])
 	}
-	if s.AvatarByNick["张三"] != "https://q1.qlogo.cn/g?nk=10001&s=100" {
+	if s.AvatarByNick["张三"] != "https://q1.qlogo.cn/g?b=qq&nk=10001&s=100" {
 		t.Errorf("张三头像不符: %q", s.AvatarByNick["张三"])
 	}
 	if _, ok := s.AvatarByNick["匿名"]; ok {
@@ -232,7 +232,7 @@ func TestBuildStats(t *testing.T) {
 }
 
 func TestQQAvatarURL(t *testing.T) {
-	if got := qqAvatarURL("qq:12345"); got != "https://q1.qlogo.cn/g?nk=12345&s=100" {
+	if got := qqAvatarURL("qq:12345"); got != "https://q1.qlogo.cn/g?b=qq&nk=12345&s=100" {
 		t.Errorf("QQ 头像不符: %q", got)
 	}
 	for _, uid := range []string{"", "fs:oc_x", "tg:123", "qo:ABC", "qq:", "qq:12ab"} {
