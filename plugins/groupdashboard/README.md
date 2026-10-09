@@ -16,7 +16,7 @@
   - **群聊氛围报告**：活跃度、话题集中度等维度评分
   - **编辑寄语**
 - 三种看板风格可选：`mint` 薄荷看板（默认）/ `magazine` 杂志海报 / `dark` 暗夜霓虹
-- 头像展示：QQ 用户自动使用 QQ 头像（渲染看板时由本机 md2img 服务访问 `q1.qlogo.cn` 拉取）；其他平台或头像加载失败时显示昵称首字圆标
+- 头像展示：QQ 用户自动使用 QQ 头像（渲染前由插件下载并内联进看板 HTML）；其他平台或头像加载失败时显示昵称首字圆标
 - 两种发送形式：
   - `image`（默认）：渲染看板 HTML 后经本地 [md2img-api](https://hub.docker.com/r/jeanhua/md2img-api) 容器截图成 PNG 发送
   - `md`：发送 Markdown 文本文件（无需额外服务，样式降级为纯文本排版）
@@ -77,7 +77,8 @@ docker run -d -p 3000:3000 --name md2img-api jeanhua/md2img-api:latest
 ```
 
 服务地址在 `plugin.groupdashboard.md2img_url` 配置（默认 `http://127.0.0.1:3000`）。
-image 模式下 md2img 内置浏览器会访问 `q1.qlogo.cn` 拉取 QQ 头像，除此之外无其他外部请求。
+image 模式下 **Bot 所在机器**会访问 `q1.qlogo.cn` 下载 QQ 头像并内联进看板 HTML，渲染容器无需外网；
+下载失败的条目自动退回昵称首字圆标。除此之外无其他外部请求。
 
 ## 行为说明
 
